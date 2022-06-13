@@ -1,0 +1,196 @@
+<nav class="navbar fixed-top" style="background-color: #ffffff; ">
+    <div>
+        <div class="d-inline px-4">
+            <img src="../assets/logo.png" height="45px">
+        </div>
+
+        <div class="d-inline px-3 home ThinkCrew-primary-color " (click)="footerscroll()">
+            <b>About</b>
+        </div>
+        <div class="d-inline px-3 ThinkCrew-primary-color home" (click)="home()">
+            <b>Home</b>
+        </div>
+    </div>
+    <div>
+        <div class="d-inline px-3">
+            <button class="btn btn-outline-danger  btn-sm mxy-0 my-sm-0" (click)="logout()">Logout</button>
+        </div>
+        <div class="d-inline px-3 ThinkCrew-primary-color home" (click)="help()">
+            <b>Help</b>
+        </div>
+    </div>
+</nav>
+<div class="p-3 admindash">
+    <div class="row no-gutters">
+        <div class="col-md-2 no-gutters">
+            <!-- Tabs nav -->
+            <div class="nav flex-column nav-pills nav-pills-custom text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link mt-5 mb-5 py-3  active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                    <i class="fa fa-bar-chart mr-2"></i>
+                    <span class="font-weight-bold small text-uppercase">Statistics</span></a>
+
+                <a class="nav-link mt-5 mb-5 py-3" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                    <i class="fa fa-user-circle-o mr-2"></i>
+                    <span class="font-weight-bold small text-uppercase">User Details</span></a>
+
+                <a class="nav-link mt-5 mb-5 py-3" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+                    <i class="fa fa-shield mr-2"></i>
+                    <span class="font-weight-bold small text-uppercase">Insurance Details</span></a>
+
+
+            </div>
+        </div>
+
+
+        <div class="col-md-10  no-gutters">
+            <!-- Tabs content -->
+            <div class="tab-content " id="v-pills-tabContent">
+                <div class="tab-pane fade rounded  show active pl-4 pr-3 py-1" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                    <h3 class="ThinkCrew-color font-weight-bold pl-3 mb-4">STATISTICS</h3>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-4 ">
+                                <div class="card" id="card1">
+                                    <div class="card-body">
+                                        <i class="fa fa-user icon-i" aria-hidden="true"></i>
+                                        <h2>{{panelDetails.userCount}}</h2>
+                                        <p>HAPPY USERS </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="card" id="card2">
+                                    <div class="card-body">
+                                        <img src="../assets/car-run-over-man.png" height="80px">
+                                        <h2>{{panelDetails.thirdPartyCount}}</h2>
+                                        <p>THIRD-PARTY INSURANCES </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="card" id="card3">
+                                    <div class="card-body">
+                                        <img src="../assets/car-crash.png" height="80px">
+                                        <h2>{{panelDetails.comprehensiveCount}}</h2>
+                                        <p>COMPREHENSIVE INSURANCES </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="card " id="card4">
+                                    <div class="card-body">
+                                        <i class="fa fa-car icon-i" aria-hidden="true"></i>
+                                        <h2>{{panelDetails.carInsuranceCount}}</h2>
+                                        <p>CARS INSURED</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="card" id="card5">
+                                    <div class="card-body">
+                                        <i class="fa fa-motorcycle icon-i" aria-hidden="true"></i>
+                                        <h2>{{panelDetails.bikeInsuranceCount}}</h2>
+                                        <p>BIKES INSURED</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="card " id="card6">
+                                    <div class="card-body">
+                                        <i class="fa fa-user-secret  icon-i" aria-hidden="true"></i>
+                                        <h2>{{panelDetails.visitorCount}}</h2>
+                                        <p>TOTAL VISITORS</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade rounded pl-4 pr-3 py-1" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                    <div class="mb-2">
+                        <h3 class="ThinkCrew-color font-weight-bold pl-3 mb-4 d-inline">USER DETAILS</h3>
+                        <div class="search-panel1 form-inline d-inline">
+                            <form class="align-right  d-inline">
+                                <input type="search" (ngModelChange)="searchUser(key.value)" #key="ngModel" ngModel name="key" id="searchName" class="form-control" placeholder="Search..." required>
+                            </form>
+                            <button type="button" class="btn ThinkCrew-bg-color d-inline">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="ThinkCrew-container">
+
+                        <div class="scroll">
+                            <table class="table table-hover table-responsive-lg ">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Full name</th>
+                                        <th scope="col">E-mail</th>
+                                        <th scope="col">Phone Number</th>
+                                        <th scope="col">Photo ID Type</th>
+                                        <th scope="col">Photo ID Details</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let u of usersList, let i = index">
+                                        <td>{{u.id}}</td>
+                                        <td>{{u.fname}} {{u.mname}} {{u.lname}}</td>
+                                        <td>{{u.gmail}}</td>
+                                        <td>{{u.mobileNo}}</td>
+                                        <td>{{u.photoIdType}}</td>
+                                        <td>{{u.photoId}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade rounded pl-4 pr-3 py-1" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                    <div class="mb-2">
+                        <h3 class="ThinkCrew-color font-weight-bold pl-3 mb-4 d-inline">INSURANCE DETAILS</h3>
+                        <div class="search-panel1 form-inline d-inline">
+                            <form class="align-right  d-inline">
+                                <input type="search" (ngModelChange)="searchUser(key.value)" #key="ngModel" ngModel name="key" id="searchName" class="form-control" placeholder="Search..." required>
+                            </form>
+                            <button type="button" class="btn ThinkCrew-bg-color d-inline">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="ThinkCrew-container">
+
+                        <div class="scroll">
+                            <table class="table table-hover table-responsive-lg ">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">TYPE OF INSURANCE</th>
+                                        <th scope="col">SPAN INSURED(YEARS)</th>
+                                        <th scope="col">AMOUNT PAID </th>
+                                        <th scope="col">VEHICLE TYPE</th>
+                                        <th scope="col">REGISTRATION NUMBER</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let il of insuranceList, let i = index">
+                                        <td>{{il.id}}</td>
+                                        <td>{{il.type}}</td>
+                                        <td>{{il.plan}}</td>
+                                        <td>{{il.fee}}</td>
+                                        <td>{{il.vehicleType}}</td>
+                                        <td>{{il.vehicle_no}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

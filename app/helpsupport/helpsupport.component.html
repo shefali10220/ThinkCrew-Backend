@@ -1,0 +1,87 @@
+<nav class="navbar fixed-top" style="background-color: #ffffff; ">
+    <div>
+        <div class="d-inline px-4">
+            <img src="../assets/logo.png" height="45px">
+        </div>
+        <div class="d-inline px-3 home ThinkCrew-primary-color " (click)="footerscroll()">
+            <b>About</b>
+        </div>
+        <div class="d-inline px-3 ThinkCrew-primary-color home" (click)="home()">
+            <b>Home</b>
+        </div>
+    </div>
+    <div>
+        <div *ngIf="logindetails.isLogged" class="d-inline px-3 ThinkCrew-primary-color home" hidden (click)="dashboard()">
+            <b onclick="footer">Dashboard</b>
+        </div>
+        <div *ngIf="logindetails.isLogged" class="d-inline px-3">
+            <button class="btn btn-outline-success  btn-sm mxy-0 my-sm-0" (click)="loginout()" hidden>{{this.loginoutBtn}}</button>
+            <button class="btn btn-outline-danger  btn-sm mxy-0 my-sm-0" (click)="loginout()">{{this.loginoutBtn}}</button>
+        </div>
+        <div *ngIf="!(logindetails.isLogged)" class="d-inline px-3">
+            <button class="btn btn-outline-success  btn-sm mxy-0 my-sm-0" (click)="loginout()">{{this.loginoutBtn}}</button>
+        </div>
+    </div>
+</nav>
+<div class="p-3 helpdash">
+    <h3 class="ThinkCrew-color font-weight-bold pl-3 mb-4" style="text-align: center;">HELP & SUPPORT</h3>
+    <div class="row no-gutters">
+        <div class="col-md-3 no-gutters">
+            <!-- Tabs nav -->
+            <div class="nav flex-column nav-pills nav-pills-custom text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link mt-3 mb-5 py-3  active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
+
+                    <span class="font-weight-bold  text-uppercase">How do I download a copy of my car or bike policy?</span></a>
+
+                <a class="nav-link mt-3 mb-5 py-3 " id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+
+                    <span class="font-weight-bold  text-uppercase">How do I change details in my personal details?</span></a>
+
+                <a class="nav-link mt-3 mb-5 py-3 " id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+
+                    <span class="font-weight-bold  text-uppercase">How do I create a claim for my car or bike policy?</span></a>
+            </div>
+        </div>
+        <div class="col-md-9  no-gutters">
+            <!-- Tabs content -->
+            <div class="tab-content " id="v-pills-tabContent">
+                <div class="tab-pane rounded  show active pl-4 pr-3 py-1" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                    <div class="ThinkCrew-container">
+                        <!-- Information -->
+                        <h4 class=" font-weight-bold pl-3 mb-4 ">How do I download a copy of my car or bike policy?</h4>
+                        <ul>
+                            <li>Once the payment is made, the option to download the policy would be visible on the screen. You will also get a copy of the policy on your registered email address.</li><br>
+                            <li>Alternatively, you can just login to ThinkCrew.com with your registered mobile number. On your policy card, please click 'View Details'.</li><br>
+                            <li>You will be redirected to the policy details page where you will see a 'Download Policy' button. Click on the button to download the policy document.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tab-pane rounded pl-4 pr-3 py-1" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                    <div class="ThinkCrew-container">
+                        <!-- Information -->
+                        <h4 class="font-weight-bold pl-3 mb-4 ">How do I change details in my personal details?</h4>
+                        <ul>
+                            <li>Go to Home Page. Go to the fotter</li><br>
+                            <li>There will be our contact list. contact either by mobile or mail us</li><br>
+                            <li>According to your request we will change your personal details</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tab-pane rounded pl-4 pr-3 py-1" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                    <div class="ThinkCrew-container">
+                        <!-- Information -->
+                        <h4 class=" font-weight-bold pl-3 mb-4">How do I create a claim for my car or bike policy?</h4>
+                        <ul>
+                            <li>Creating a claim is easy. Just login to ThinkCrew.com with your registered mobile number.</li><br>
+                            <li>On your Policy Card, click on 'Claim Now'.</li><br>
+                            <li>Answer the few questions that follow and you are done. Our claims expert will get back to you shortly and assist you on the next steps..</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

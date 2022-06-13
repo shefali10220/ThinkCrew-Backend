@@ -1,0 +1,180 @@
+.ThinkCrew-primary-color {
+    color: #513992;
+}
+
+.img {
+    left: 100px;
+    margin-left: 30%;
+}
+
+#footer {
+    background: rgb(250, 249, 249);
+    width: 100%;
+    height: 200px;
+    bottom: 0;
+    left: 0;
+}
+
+.logo {
+    height: 50px;
+    width: 70px;
+    object-fit: cover;
+}
+
+.img1 {
+    width: 600px;
+    height: 200px;
+    left: 100px;
+    margin-left: 30%;
+    object-fit: cover;
+}
+
+.home:hover {
+    padding: 6px;
+    border-radius: 4px;
+    display: block;
+    background-color: #513992;
+    color: white;
+}
+
+.ThinkCrew-bg-primary-color {
+    background-color: #513992;
+}
+
+#regForm {
+    background-color: #e0fbfc;
+    margin: 0px auto;
+    font-family: Raleway;
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.img {
+    position: relative;
+    margin-left: 150px;
+    margin-bottom: 30px;
+}
+
+.img1 {
+    position: relative;
+    margin-left: 150px;
+    margin-bottom: 20px;
+}
+
+.bbb-wrapper {
+    height: 600px;
+    width: 100%;
+}
+
+.fl-wrap {
+    float: left;
+    width: 100%;
+    position: relative;
+}
+
+.bbb-wrapper .subcribe-form p {
+    color: #fff;
+    font-size: 14px
+}
+
+.bbb-wrapper .subcribe-form form {
+    max-width: 450px;
+    margin: 65px auto;
+    position: relative
+}
+
+.bbb-wrapper .subcribe-form #subscribe input {
+    width: 110%;
+    height: 88px;
+    background: #fff;
+    border: rounded;
+    outline: none;
+    border-radius: 7px;
+    padding: 0 30px
+}
+
+.bbb-wrapper .subcribe-form #subscribe #subscribe-button {
+    height: 50px;
+    padding: 0px 25px;
+    border-radius: 3px;
+    border: none;
+    position: absolute;
+    right: 1px;
+    left: 325px;
+    top: 20px;
+    font-size: 15px;
+    color: #fff;
+    cursor: pointer
+}
+
+.subscribe-message {
+    color: #fff;
+    float: left;
+    margin-top: 10px;
+    text-align: left;
+    font-weight: 500;
+    line-height: 19px
+}
+
+#aligning {
+    margin-top: 150px;
+    margin-left: -2%;
+}
+
+#confirmBox {
+    top: 70%;
+    left: 35%;
+    padding-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    background: #fff;
+    border-radius: 5px;
+    width: 110%;
+    height: 25%;
+    margin-top: 15px;
+    float: inline-start;
+    transition: all .5s ease-in-out;
+    opacity: 0;
+}
+
+#confirmBox.visible {
+    opacity: 1;
+}
+
+#confirmBox .message {
+    width: 100%;
+    text-align: top;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+#confirmBox button {
+    width: 80px;
+    background-color: #fff;
+}
+
+#confirmBox button:first-child {
+    margin-left: 12%;
+}
+
+#confirmBox button:last-child {
+    margin-right: 20%;
+    float: right;
+}
+
+.close {
+    align-self: right;
+    margin-right: 0%;
+    margin-top: 0%;
+    margin-left: 100%;
+}
+
+.textColor {
+    color: #513992;
+}
+
+.textaligning {
+    margin-left: 18%;
+}

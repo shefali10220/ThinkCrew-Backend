@@ -1,0 +1,151 @@
+<html>
+
+<head>
+    <style>
+        body {
+            height: 900px;
+            width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 0px;
+        }
+        
+        th,
+        td {
+            border-collapse: collapse;
+            border: 1px solid white;
+            text-align: center;
+        }
+        
+        th {
+            background-color: #ddccff;
+            text-align: center;
+        }
+    </style>
+</head>
+<nav class="navbar fixed-top" style="background-color: #ffffff; ">
+    <div>
+        <div class="d-inline px-4">
+            <img src="../assets/logo.png" height="45px">
+        </div>
+
+        <div class="d-inline px-3 home ThinkCrew-primary-color " (click)="footerscroll()">
+            <b>About</b>
+        </div>
+        <div class="d-inline px-3 ThinkCrew-primary-color home" (click)="home()">
+            <b>Home</b>
+        </div>
+    </div>
+    <div>
+        <div *ngIf="logindetails.isLogged" class="d-inline px-3 ThinkCrew-primary-color home" hidden (click)="dashboard()">
+            <b>Dashboard</b>
+        </div>
+        <div *ngIf="logindetails.isLogged" class="d-inline px-3">
+            <button class="btn btn-outline-success  btn-sm mxy-0 my-sm-0" (click)="loginout()" hidden>{{this.loginoutBtn}}</button>
+            <button class="btn btn-outline-danger  btn-sm mxy-0 my-sm-0" (click)="loginout()">{{this.loginoutBtn}}</button>
+        </div>
+        <div *ngIf="!(logindetails.isLogged)" class="d-inline px-3">
+            <button class="btn btn-outline-success  btn-sm mxy-0 my-sm-0" (click)="loginout()">{{this.loginoutBtn}}</button>
+        </div>
+        <div class="d-inline px-3 ThinkCrew-primary-color home" (click)="help()">
+            <b>Help</b>
+        </div>
+    </div>
+</nav>
+
+<div class="background-color">
+
+    <body>
+        <div class="text-center aligning" style="color: #513992;  ">
+            <h3>ThinkCrew</h3><small class="text-muted">© 2020 Copyright: ThinkCrew Vehicle Insurance Pvt. Ltd.</small>
+        </div>
+        <div class="background">
+            <table class="table table-sm table-condensed" style="width: 100%;  border-collapse: separate; ">
+                <tr class="bg-info">
+                    <th>Name </th>
+                    <th>Policy Number</th>
+                </tr>
+                <tr>
+                    <td>{{viewInsuranceDetail.userFname}} {{viewInsuranceDetail.userMname}} {{viewInsuranceDetail.userLname}}</td>
+                    <td>{{viewInsuranceDetail.policyNumber}}</td>
+                </tr><br>
+
+                <tr class="bg-info">
+                    <th>E-mail</th>
+                    <th>Phone Number</th>
+                </tr>
+                <tr>
+                    <td>{{viewInsuranceDetail.userEmail}}</td>
+                    <td>{{viewInsuranceDetail.userPhone}}</td>
+                </tr><br>
+
+                <tr class="bg-info">
+                    <th>Photo ID</th>
+                    <th>{{viewInsuranceDetail.userPhotoIdType}} Number</th>
+                </tr>
+                <tr>
+                    <td>{{viewInsuranceDetail.userPhotoIdType}}</td>
+                    <td>{{viewInsuranceDetail.userPhotoIdNumber}}</td>
+                </tr><br>
+
+                <tr class="bg-info">
+                    <th>Vehicle Type</th>
+                    <th>Vehicle Registraion Number</th>
+                </tr>
+                <tr>
+                    <td>{{viewInsuranceDetail.vehicleType}}</td>
+                    <td>{{viewInsuranceDetail.vehicleRegistrationNumber}}</td>
+                </tr><br>
+                <tr class="bg-info">
+                    <th>Vehicle Brand</th>
+                    <th>Vehicle Model</th>
+                </tr>
+                <tr>
+                    <td>{{viewInsuranceDetail.vehicleBrand}}</td>
+                    <td>{{viewInsuranceDetail.vehicleModel}}</td>
+                </tr><br>
+                <tr class="bg-info">
+                    <th>Insurance Type</th>
+                    <th>Duration Insured</th>
+                </tr>
+                <tr>
+                    <td>{{viewInsuranceDetail.insuranceType}}</td>
+                    <td>{{viewInsuranceDetail.insuranceDuration}}</td>
+                </tr><br>
+                <tr class="bg-info">
+                    <th>Insurance Start Date</th>
+                    <th>Insurance End Date</th>
+
+                </tr>
+                <tr>
+                    <td>{{viewInsuranceDetail.insuranceStartDate}}</td>
+                    <td>{{viewInsuranceDetail.insuranceEndDate}}</td>
+                </tr><br>
+
+                <tr class="bg-info">
+                    <th>Premium paid</th>
+                    <th>Maximum Amount insured</th>
+                </tr>
+                <tr>
+                    <td>{{viewInsuranceDetail.insurancePremiumPaid}}</td>
+                    <td>{{viewInsuranceDetail.maxAmountInsured}}</td>
+                </tr>
+            </table><br><br>
+            <table style="width: 100%; border: none;text-align:justify; ">
+                <tr>
+                    <td style="border: none;"><u>Authority Signature</u>
+                    </td>
+                    <td style="border: none;"><u>Customer Signature</u></td>
+                </tr>
+                <small class="text-muted">Online copy is electonically signed</small>
+            </table>
+        </div>
+    </body>
+    <div justify-content-center style="margin-top:1%; margin-bottom: 1%; margin-left:40%;">
+        <button class="btn btn-outline-primary" (click)="user()" role="button" style="margin-right: 150px;">Back</button>
+        <button class="btn btn-outline-primary" (click)="downloadlinkurl(viewInsuranceDetail.policyNumber)" role="button">download PDF</button>
+    </div>
+
+</div>
+
+</html>

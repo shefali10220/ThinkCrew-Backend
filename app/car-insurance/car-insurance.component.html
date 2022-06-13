@@ -1,0 +1,104 @@
+<nav class="navbar fixed-top" style="background-color: #ffffff; ">
+    <div>
+        <div class="d-inline px-4">
+            <img src="../assets/logo.png" height="45px">
+        </div>
+        <div class="d-inline px-3 home ThinkCrew-primary-color " (click)="footerscroll()">
+            <b>About</b>
+        </div>
+        <div class="d-inline px-3 ThinkCrew-primary-color home" (click)="home()">
+            <b>Home</b>
+        </div>
+    </div>
+    <div>
+        <div *ngIf="logindetails.isLogged" class="d-inline px-3 ThinkCrew-primary-color home" hidden (click)="dashboard()">
+            <b>Dashboard</b>
+        </div>
+        <div *ngIf="logindetails.isLogged" class="d-inline px-3">
+            <button class="btn btn-outline-success  btn-sm mxy-0 my-sm-0" (click)="loginout()" hidden>{{this.loginoutBtn}}</button>
+            <button class="btn btn-outline-danger  btn-sm mxy-0 my-sm-0" (click)="loginout()">{{this.loginoutBtn}}</button>
+        </div>
+        <div *ngIf="!(logindetails.isLogged)" class="d-inline px-3">
+            <button class="btn btn-outline-success  btn-sm mxy-0 my-sm-0" (click)="loginout()">{{this.loginoutBtn}}</button>
+        </div>
+        <div class="d-inline px-3 ThinkCrew-primary-color home" (click)="help()">
+            <b>Help</b>
+        </div>
+    </div>
+</nav>
+<div class="row d-flex justify-content-center " id="aligning">
+    <div class="col-xl-10 col-lg-20 col-md-10 col-12 text-center ">
+        <div class="card  text-dark border border-dark ">
+            <h3 class="text-center font-weight mb-4 textColor"><b>CAR INSURANCE</b></h3>
+            <form class="form-card" #frm=ngForm>
+                <div class="row justify-content-between text-left left">
+                    <div class="form-group col-sm-6 flex-column d-flex ">
+                        <label for="Inputselect" class="form-control-label px-3 ">Brand</label>
+                        <select class="form-control inputstl   form-group col-sm-10 flex-column d-flex  form-control-label px-3" (change)="getModel($event)" required [(ngModel)]="selectedBrand" name="brand" #brand=ngModel>
+                            <option *ngFor="let brand of brandList" [value]="this.brand">{{ brand }}</option>
+                        </select>
+                        <div *ngIf="brand.untouched">
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-6 flex-column d-flex right">
+                        <label for="Inputselect" class="form-control-label px-3">Model</label>
+                        <select class="form-control inputstl  form-group col-sm-10 flex-column d-flex  form-control-label px-3" (change)="getVariant($event)" required [(ngModel)]="selectedModel" name="model" #model=ngModel>
+                            <option *ngFor="let model of modelList" [value]="this.model">{{ model }}</option>
+                        </select>
+                        <div *ngIf="model.untouched">
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-between text-left left">
+                    <div class="form-group col-sm-6 flex-column d-flex">
+                        <label for="Inputselect" class="form-control-label">Variant</label>
+                        <select class="form-control inputstl  form-group col-sm-10 flex-column d-flex  form-control-label px-3" required [(ngModel)]="selectedVariant" name="variant" #variant=ngModel>
+                            <option *ngFor="let variant of variantList" [value]="this.variant">{{ variant }}</option>
+                        </select>
+                        <div *ngIf="variant.untouched ">
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-6 flex-column d-flex right">
+                        <label for="Inputselect" class="form-control-label">Fuel Type</label>
+                        <select class="form-control inputstl   form-group col-sm-10 flex-column d-flex  form-control-label px-3" #fuel=ngModel required [(ngModel)]="fuelType" name="fuelType">
+                            <option value="Deseil">Diesel</option>
+                            <option value="Petrol">Petrol</option>
+                            <option value="CNG">CNG</option>
+                        </select>
+                        <div *ngIf="fuel.untouched">
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-between text-left left ">
+                    <div class="form-group col-sm-6 flex-column d-flex">
+                        <label for="Inputselect" class="form-control-label">Year</label>
+                        <select class="form-control inputstl   form-group col-sm-10 flex-column d-flex  form-control-label px-3" required [(ngModel)]="year" #yr=ngModel name="year">
+                            <option>2006</option>
+                            <option>2007</option>
+                            <option>2008</option>
+                            <option>2009</option>
+                            <option>2010</option>
+                            <option>2011</option>
+                            <option>2012</option>
+                            <option>2013</option>
+                            <option>2014</option>
+                            <option>2015</option>
+                            <option>2016</option>
+                            <option>2017</option>
+                            <option>2018</option>
+                            <option>2019</option>
+                            <option>2020</option>
+                            <option>2021</option>
+                        </select>
+                        <div *ngIf="yr.untouched ">
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="form-group col-sm-10"><button [disabled]="!frm.valid" (click)="save()" type="submit" class="btn btn-outline-primary btn-lg">Submit </button></div>
+                </div>
+                <div class="backalign" onclick="history.back()"><i class="fa fa-chevron-left ThinkCrew-primary-color" aria-hidden="true"></i></div>
+            </form>
+        </div>
+    </div>
+</div>

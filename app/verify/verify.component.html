@@ -1,0 +1,43 @@
+<nav class="navbar fixed-top" style="background-color: #ffffff; ">
+    <div>
+        <div class="d-inline px-4">
+            <img src="../assets/logo.png" height="45px">
+        </div>
+
+        <div class="d-inline px-3 home ThinkCrew-primary-color">
+            <b>About</b>
+        </div>
+        <div class="d-inline px-3 ThinkCrew-primary-color home" (click)="home()">
+            <b>Home</b>
+        </div>
+    </div>
+    <div>
+        <div *ngIf="logindetails.isLogged" class="d-inline px-3 ThinkCrew-primary-color home" hidden (click)="dashboard()">
+            <b>Dashboard</b>
+        </div>
+        <div *ngIf="logindetails.isLogged" class="d-inline px-3">
+            <button class="btn btn-outline-success  btn-sm mxy-0 my-sm-0" (click)="loginout()" hidden>{{this.loginoutBtn}}</button>
+            <button class="btn btn-outline-danger  btn-sm mxy-0 my-sm-0" (click)="loginout()">{{this.loginoutBtn}}</button>
+        </div>
+        <div *ngIf="!(logindetails.isLogged)" class="d-inline px-3">
+            <button class="btn btn-outline-success  btn-sm mxy-0 my-sm-0" (click)="loginout()">{{this.loginoutBtn}}</button>
+        </div>
+        <div class="d-inline px-3 ThinkCrew-primary-color home" (click)="help()">
+            <b>Help</b>
+        </div>
+    </div>
+</nav>
+
+<div class="main">
+    <h3 class="text-center ThinkCrew-primary-color">EMAIL VERIFICATION</h3>
+</div>
+<form class="form-inline justify-content-center aligning">
+    <div class="form-group  ">
+        <label for="inputEmail"></label>
+        <input name="email" [(ngModel)]="email" type="email" class="form-control" id="inputEmail" value="{{this.verify.data.gmail}}">
+    </div>
+    <div class="ml-4">
+        <input name="otp" [(ngModel)]="otp" type="number" class="form-control" id="inputotp" placeholder="OTP">
+    </div>
+    <button type="submit" class="btn btn-outline-primary butalign" (click)="verifyEmail()">{{this.verifybutton}}</button>
+</form>

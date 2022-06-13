@@ -1,0 +1,86 @@
+.ThinkCrew-primary-color {
+    color: #513992;
+}
+
+.img {
+    left: 100px;
+    margin-left: 30%;
+}
+
+#footer {
+    background: rgb(250, 249, 249);
+    width: 100%;
+    height: 200px;
+    bottom: 0;
+    left: 0;
+}
+
+.logo {
+    height: 50px;
+    width: 70px;
+    object-fit: cover;
+}
+
+.img1 {
+    width: 600px;
+    height: 200px;
+    left: 100px;
+    margin-left: 30%;
+    object-fit: cover;
+}
+
+.home:hover {
+    padding: 6px;
+    border-radius: 4px;
+    display: block;
+    background-color: #513992;
+    color: white;
+}
+
+.textColor {
+    color: #513992;
+}
+
+.aligning {
+    margin-top: 4%;
+}
+
+.bgColor {
+    background-color: rgb(250, 250, 250);
+    width: 100%;
+}
+
+.banner {
+    height: 650px;
+    margin-top: 5%;
+}
+
+.container {
+    width: 100%;
+}
+
+.effect {
+    border-color: #513992;
+}
+
+.page {
+    width: 100%;
+}
+
+.textEdit {
+    text-align: center;
+}
+
+.align {
+    margin-top: 20px;
+}
+
+small {
+    color: #513992;
+}
+
+.backalign {
+    margin-top: 5%;
+    align-content: center;
+    margin-left: 50%;
+}

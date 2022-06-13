@@ -1,0 +1,66 @@
+.ThinkCrew-primary-color {
+    color: #513992;
+}
+
+.img {
+    left: 100px;
+    margin-left: 30%;
+}
+
+#footer {
+    background: rgb(250, 249, 249);
+    width: 100%;
+    height: 200px;
+    bottom: 0;
+    left: 0;
+}
+
+.logo {
+    height: 50px;
+    width: 70px;
+    object-fit: cover;
+}
+
+.img1 {
+    width: 600px;
+    height: 200px;
+    left: 100px;
+    margin-left: 30%;
+    object-fit: cover;
+}
+
+.home:hover {
+    padding: 6px;
+    border-radius: 4px;
+    display: block;
+    background-color: #513992;
+    color: white;
+}
+
+.card {
+    padding: 40px 150px;
+    margin-top: 3%;
+    margin-bottom: auto;
+    margin-left: 3%;
+    margin-right: auto;
+    border: none !important;
+    background-color: rgb(250, 250, 250);
+    width: 100%;
+}
+
+.inputstl {
+    padding: 12px;
+    border: solid 1px #afcfe4;
+    outline: 0;
+    background: -webkit(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #CDDBE4), to(#FFFFFF));
+    background: -moz-linear-gradient(top, #FFFFFF, #CDDBE4 1px, #FFFFFF 25px);
+}
+
+#aligning {
+    margin-top: 0%;
+    background-color: rgb(250, 250, 250);
+}
+
+.textColor {
+    color: #513992;
+}

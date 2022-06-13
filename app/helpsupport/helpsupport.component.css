@@ -1,0 +1,104 @@
+.ThinkCrew-primary-color {
+    color: #513992;
+}
+
+.img {
+    left: 100px;
+    margin-left: 30%;
+}
+
+#footer {
+    background: rgb(250, 249, 249);
+    width: 100%;
+    height: 200px;
+    bottom: 0;
+    left: 0;
+}
+
+.logo {
+    height: 50px;
+    width: 70px;
+    object-fit: cover;
+}
+
+.img1 {
+    width: 600px;
+    height: 200px;
+    left: 100px;
+    margin-left: 30%;
+    object-fit: cover;
+}
+
+.home:hover {
+    padding: 6px;
+    border-radius: 4px;
+    display: block;
+    background-color: #513992;
+    color: white;
+}
+
+.body {
+    margin-right: 2px;
+    border: solid black 2px;
+}
+
+.helpdash {
+    background-color: rgb(250, 250, 250);
+    height: 550px;
+}
+
+.nav-pills-custom .nav-link {
+    color: #513992;
+    position: relative;
+}
+
+.nav-pills-custom .nav-link.active {
+    color: white;
+    background: #513992;
+}
+
+.tab-content {
+    height: 500px;
+    width: 100%;
+}
+
+.icon-i {
+    font-size: 80px;
+}
+
+.ThinkCrew-color {
+    color: #513992;
+}
+
+.ThinkCrew-bg-color {
+    color: white;
+    background-color: #513992;
+}
+
+.card {
+    margin-bottom: 5px;
+    color: white;
+    height: 87%;
+    text-align: center;
+}
+
+ul {
+    margin-left: 1%;
+    margin-top: 5%;
+}
+
+thead {
+    background-color: #b9a4f0;
+}
+
+.ThinkCrew-container {
+    min-height: 440px;
+    max-height: 440px;
+    margin-top: 1%;
+    padding-top: 3%;
+    border: solid #513992 1px;
+}
+
+.align-left {
+    justify-content: left;
+}

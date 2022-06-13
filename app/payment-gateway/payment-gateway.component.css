@@ -1,0 +1,106 @@
+.ThinkCrew-primary-color {
+    color: #513992;
+}
+
+.img {
+    left: 100px;
+    margin-left: 30%;
+}
+
+.logo {
+    height: 50px;
+    width: 70px;
+    object-fit: cover;
+}
+
+.img1 {
+    width: 600px;
+    height: 200px;
+    left: 100px;
+    margin-left: 30%;
+    object-fit: cover;
+}
+
+.home:hover {
+    padding: 6px;
+    border-radius: 4px;
+    display: block;
+    background-color: #513992;
+    color: white;
+}
+
+.padding {
+    padding: 5rem !important;
+    height: 650px;
+    background-color: rgb(250, 250, 250);
+}
+
+.card {
+    margin-bottom: 1.5rem;
+    margin-left: 70%;
+    width: 70%;
+}
+
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid #c8ced3;
+    border-radius: .25rem
+}
+
+.card-header:first-child {
+    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0
+}
+
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: #9560BD;
+    border-bottom: 1px solid #c8ced3
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 1.25rem
+}
+
+.form-control:focus {
+    color: #5c6873;
+    background-color: #fff;
+    border-color: #c8ced3 !important;
+    outline: 0;
+    box-shadow: 0 0 0 #F44336
+}
+
+.aligning {
+    margin-top: -3%;
+}
+
+.align {
+    margin-left: 30px;
+}
+
+.was-validated {
+    margin-top: 2%;
+}
+
+.select-input {
+    border: solid 1px rgb(45, 167, 45);
+    width: 100%;
+    height: 50%;
+    border-radius: 5px;
+}
+
+.select-input-cvv {
+    border: solid 1px rgb(45, 167, 45);
+    width: 100%;
+    height: 40%;
+    border-radius: 5px;
+}

@@ -1,0 +1,41 @@
+<nav class="navbar fixed-top" style="background-color: #ffffff; ">
+    <div>
+        <div class="d-inline px-4">
+            <img src="../assets/logo.png" height="45px">
+        </div>
+        <div class="d-inline px-3 home ThinkCrew-primary-color " (click)="footerscroll()">
+            <b>About</b>
+        </div>
+        <div class="d-inline px-3 ThinkCrew-primary-color home" (click)="home()">
+            <b>Home</b>
+        </div>
+    </div>
+    <div>
+        <div *ngIf="logindetails.isLogged" class="d-inline px-3">
+            <button class="btn btn-outline-success  btn-sm mxy-0 my-sm-0" (click)="loginout()" hidden>{{this.loginoutBtn}}</button>
+            <button class="btn btn-outline-danger  btn-sm mxy-0 my-sm-0" (click)="loginout()">{{this.loginoutBtn}}</button>
+        </div>
+        <div *ngIf="!(logindetails.isLogged)" class="d-inline px-3">
+            <button class="btn btn-outline-success  btn-sm mxy-0 my-sm-0" (click)="loginout()">{{this.loginoutBtn}}</button>
+        </div>
+        <div class="d-inline px-3 ThinkCrew-primary-color home" (click)="help()">
+            <b>Help</b>
+        </div>
+
+    </div>
+</nav>
+<div class=" bgColor">
+    <div>
+        <h1 class="text-center textColor  ">WELCOME TO ThinkCrew</h1>
+        <div class="align margin1">
+            <h3 class="text-center textColor">THANK YOU FOR CHOOSING US.</h3>
+            <h4 class="text-center textColor">ALWAYS AT YOUR SERVICE.</h4>
+            <h3 class="text-center textColor">ALL THE INFORMATION HAS BEEN RECORDED AND SECURED WITH US.</h3>
+            <h4 class="text-center textColor">Insurance details will be sent to ur registered Mail-ID.</h4>
+        </div>
+        <div class="button-align">
+            <button class="btn btn-outline-primary" (click)="dashboard()" role="button" style="margin-right: 10%;">Dashboard</button>
+            <button class="btn btn-outline-primary" (click)="downloadlinkurl()" role="button">Download</button>
+        </div>
+    </div>
+</div>

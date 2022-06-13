@@ -1,0 +1,85 @@
+.ThinkCrew-primary-color {
+    color: #513992;
+}
+
+.img {
+    left: 100px;
+    margin-left: 30%;
+}
+
+#footer {
+    background: rgb(250, 249, 249);
+    width: 100%;
+    height: 200px;
+    bottom: 0;
+    left: 0;
+}
+
+.logo {
+    height: 50px;
+    width: 70px;
+    object-fit: cover;
+}
+
+.img1 {
+    width: 600px;
+    height: 200px;
+    left: 100px;
+    margin-left: 30%;
+    object-fit: cover;
+}
+
+.home:hover {
+    padding: 6px;
+    border-radius: 4px;
+    display: block;
+    background-color: #513992;
+    color: white;
+}
+
+.logo-image {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -6px;
+}
+
+body {
+    margin-top: 100px;
+    padding: 0;
+    height: 100%;
+}
+
+#body {
+    padding: 10px;
+    padding-bottom: 60px;
+    /* Height of the footer */
+}
+
+.card {
+    padding: 40px 150px;
+    margin-top: 5%;
+    margin-bottom: 80px;
+    margin-left: 2%;
+    margin-right: auto;
+    border: none !important;
+    background-color: rgb(250, 250, 250);
+}
+
+.inputstl {
+    padding: 12px;
+    border: solid 1px #afcfe4;
+    outline: 0;
+    background: -webkit(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #CDDBE4), to(#FFFFFF));
+    background: -moz-linear-gradient(top, #FFFFFF, #CDDBE4 1px, #FFFFFF 25px);
+}
+
+#aligning {
+    margin-top: 0%;
+    background-color: rgb(250, 250, 250);
+}
+
+.textColor {
+    color: #513992;
+}

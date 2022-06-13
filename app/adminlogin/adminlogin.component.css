@@ -1,0 +1,95 @@
+.ThinkCrew-primary-color {
+    color: #513992;
+}
+
+.img {
+    left: 100px;
+    margin-left: 30%;
+}
+
+#footer {
+    background: rgb(250, 249, 249);
+    width: 100%;
+    height: 200px;
+    bottom: 0;
+    left: 0;
+}
+
+.logo {
+    height: 50px;
+    width: 70px;
+    object-fit: cover;
+}
+
+.img1 {
+    width: 600px;
+    height: 200px;
+    left: 100px;
+    margin-left: 30%;
+    object-fit: cover;
+}
+
+.home:hover {
+    padding: 6px;
+    border-radius: 4px;
+    display: block;
+    background-color: #513992;
+    color: white;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    margin-top: 0%;
+    align-content: center;
+    background-color: rgb(250, 250, 250);
+}
+
+.itop {
+    margin-top: 55%;
+}
+
+.aligning {
+    margin-left: 45%;
+    margin-right: 42%;
+}
+
+.aligning2 {
+    margin-left: 30%;
+    margin-right: 30%;
+    text-align: center;
+}
+
+.aligning3 {
+    margin-left: 30%;
+    margin-right: 30%;
+    text-align: center;
+}
+
+.input {
+    width: 60%;
+    margin-top: 5%;
+    align-content: center;
+    padding: 12px;
+    border-radius: 2px;
+    border: solid 1px #afcfe4;
+    outline: 0;
+    background: -webkit(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #CDDBE4), to(#FFFFFF));
+    background: -moz-linear-gradient(top, #FFFFFF, #CDDBE4 1px, #FFFFFF 25px);
+}
+
+.admin {
+    margin-left: -40%;
+}
+
+.backalign {
+    margin-top: 5%;
+    margin-left: 2%;
+}
+
+button {
+    margin-top: 3%;
+    font-size: 20px;
+    text-align: center;
+}

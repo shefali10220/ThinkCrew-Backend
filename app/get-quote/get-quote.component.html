@@ -1,0 +1,65 @@
+<!-- navigation-begin -->
+<nav class="navbar fixed-top" style="background-color: #ffffff; ">
+    <div>
+        <div class="d-inline px-4">
+            <img src="../assets/logo.png" height="45px">
+        </div>
+        <div class="d-inline px-3 home ThinkCrew-primary-color " (click)="footerscroll()">
+            <b>About</b>
+        </div>
+        <div class="d-inline px-3 ThinkCrew-primary-color home" (click)="home()">
+            <b>Home</b>
+        </div>
+    </div>
+    <div>
+        <!-- <div *ngIf="logindetails.isLogged" class="d-inline px-3 ThinkCrew-primary-color home" (click)="dashboard()"><b>Dashboard</b>
+        </div>
+        <div *ngIf="logindetails.isLogged" class="d-inline px-3">
+            <button class="btn btn-outline-success  btn-sm mxy-0 my-sm-0" (click)="loginout()" hidden>{{this.loginoutBtn}}</button>
+            <button class="btn btn-outline-danger  btn-sm mxy-0 my-sm-0" (click)="loginout()">{{this.loginoutBtn}}</button>
+        </div>
+        <div *ngIf="!(logindetails.isLogged)" class="d-inline px-3">
+            <button class="btn btn-outline-success  btn-sm mxy-0 my-sm-0" (click)="loginout()">{{this.loginoutBtn}}</button>
+        </div> -->
+        <div class="d-inline px-3 ThinkCrew-primary-color home" (click)="help()">
+            <b>Help</b>
+        </div>
+    </div>
+</nav>
+<!-- navigation-end -->
+<!-- getcomponent-content-display-begin -->
+<div class="bbb-wrapper fl-wrap ThinkCrew-bg-primary-color">
+    <div class="subcribe-form fl-wrap" id="aligning">
+        <h2 class="text-center text-white"><b>Insurance Made Easy</b> </h2>
+        <form id="subscribe" #frm=ngForm> <input #vnumber=ngModel [(ngModel)]="vehicleNumber" class="form-control " name="vnumber" id="vnumber" placeholder="Enter vehicle Number eg-MH00P1112" spellcheck="false" type="text" required pattern="[A-Z][A-Z][0-9][0-9][A-Z][0-9]{4,}">
+            <button (click)="save()" type="submit" id="subscribe-button" class="btn btn-success"><b>Insure
+                    Now</b>&nbsp;<i class="fa fa-arrow-right"></i></button>
+            <label for="vehicle-number" class="vehicle-number">
+                <div *ngIf="vnumber.dirty && vnumber.invalid" class="alert alert-warning">
+                    Invalid vehicle number
+                </div>
+            </label>
+            <div class=" text-white ">Don't know Vehicle Number? <a class="text-primary h5 " (click)="popUp()">GetQuote</a></div>
+            <div id="confirmBox" [class.visible]="DisplayDialogBox">
+                <div class="close d-inline">
+                    <button [disabled]="!displayConfirmBox" class=" btn btn-sm" type="button" (click)="cancel()">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
+                <div class="message d-inline ">
+
+                    <h4 class="textaligning font-weight textColor">CHOOSE VEHICLE TYPE:</h4>
+                </div>
+                <div style="margin-top: 10px;">
+                    <button [disabled]="!displayConfirmBox" (click)="ClickCar()" type="button" class="btn  btn-sm btn-rounded"><img
+                            src=" https://cdn4.iconfinder.com/data/icons/transport-flat-icons-vol-1/256/39-512.png"
+                            height="70" width="70"></button>
+                    <button [disabled]="!displayConfirmBox" (click)="ClickBike()" type="button" class="btn  btn-sm btn-rounded"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Circle-icons-motorcycle.svg/1024px-Circle-icons-motorcycle.svg.png"
+                            height="70" width="70"> </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- getcomponent-content-display-end -->
